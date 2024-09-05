@@ -1,8 +1,5 @@
 #### What's Improved
 
-Following enhancements have been made to the RSA Netwitness SIEM in version 1.2.0: 
+Following enhancements have been made to the RSA Netwitness SIEM in version 1.2.1: 
 
-- Added the following actions and playbooks: 
-    - Get Alerts
-    - Get Hosts List
-    - Get Service IDs
+- Added a new input parameter `Include Fields` in the action `Get Alerts` to include only specified fields in response.

@@ -4,24 +4,18 @@ The RSA NetWitness Platform is an evolved SIEM and threat detection and response
 
 ### Version information
 
-Connector Version: 1.2.0
+Connector Version: 1.2.1
 
 
 Authored By: Fortinet
 
 Certified: No
-## Release Notes for version 1.2.0
-Following enhancements have been made to the RSA Netwitness SIEM Connector in version 1.2.0:
-<p>Following enhancements have been made to the RSA Netwitness SIEM in version 1.2.0: </p>
+## Release Notes for version 1.2.1
+Following enhancements have been made to the RSA Netwitness SIEM Connector in version 1.2.1:
 
 <ul>
-<li><p>Added the following actions and playbooks: </p>
-
-<ul>
-<li>Get Alerts</li>
-<li>Get Hosts List</li>
-<li>Get Service IDs</li>
-</ul></li>
+<li><p>Added a new input parameter `Include Fields` in the action `Get Alerts` to include only specified fields in response.</p>
+</li>
 </ul>
 
 ## Installing the connector
@@ -112,8 +106,8 @@ The output contains the following populated JSON schema:
 }</pre>
 ### operation: Get Incidents by Date Range
 #### Input parameters
-<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Start Time</td><td>Specify the timestamp based on which to retrieve incidents from RSA NetWitness SIEM. Incidents that were created on or after this timestamp are retrieved from RSA NetWitness SIEM.
-</td></tr><tr><td>End Time</td><td>Specify the timestamp based on which to retrieve incidents from RSA NetWitness SIEM. Incidents that were created on or before this timestamp are retrieved from RSA NetWitness SIEM.
+<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Start Time</td><td>(Optional) Specify the timestamp based on which to retrieve incidents from RSA NetWitness SIEM. Incidents that were created on or after this timestamp are retrieved from RSA NetWitness SIEM.
+</td></tr><tr><td>End Time</td><td>(Optional) Specify the timestamp based on which to retrieve incidents from RSA NetWitness SIEM. Incidents that were created on or before this timestamp are retrieved from RSA NetWitness SIEM.
 </td></tr><tr><td>Page Number</td><td>(Optional) Specify the page number from which to request for data.
 </td></tr><tr><td>Page Size</td><td>(Optional) Specify the maximum number of records that you want to return in a single page.
 </td></tr></tbody></table>
@@ -243,8 +237,9 @@ The output contains the following populated JSON schema:
 }</pre>
 ### operation: Get Alerts
 #### Input parameters
-<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Field Name</td><td>Specify the field name based on which the alerts are retrieved.
-</td></tr><tr><td>Field Value</td><td>Specify the value for the field based on which the alerts are retrieved.
+<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Field Name</td><td>(Optional) Specify the field name based on which the alerts are retrieved.
+</td></tr><tr><td>Field Value</td><td>(Optional) Specify the value for the field based on which the alerts are retrieved.
+</td></tr><tr><td>Include Fields</td><td>(Optional) Specify the comma-separated list of fields to include in response.
 </td></tr><tr><td>Limit</td><td>(Optional) Specify the maximum number of records that you want to return in response. By default, this is set to 10.
 </td></tr></tbody></table>
 
@@ -522,7 +517,7 @@ The output contains the following populated JSON schema:
     }
 ]</pre>
 ## Included playbooks
-The `Sample - rsa-netwitness-siem - 1.2.0` playbook collection comes bundled with the RSA Netwitness SIEM connector. These playbooks contain steps using which you can perform all supported actions. You can see bundled playbooks in the **Automation** > **Playbooks** section in FortiSOAR&trade; after importing the RSA Netwitness SIEM connector.
+The `Sample - rsa-netwitness-siem - 1.2.1` playbook collection comes bundled with the RSA Netwitness SIEM connector. These playbooks contain steps using which you can perform all supported actions. You can see bundled playbooks in the **Automation** > **Playbooks** section in FortiSOAR&trade; after importing the RSA Netwitness SIEM connector.
 
 - \> RSA Netwitness SIEM > Fetch
 - \>> RSA Netwitness SIEM> Fetch Associated events for Incident

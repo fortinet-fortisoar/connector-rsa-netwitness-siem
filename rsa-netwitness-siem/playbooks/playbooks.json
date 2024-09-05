@@ -4,10 +4,10 @@
     {
       "@context": "/api/3/contexts/WorkflowCollection",
       "@type": "WorkflowCollection",
-      "name": "Sample - RSA Netwitness SIEM - 1.2.0",
+      "name": "Sample - RSA Netwitness SIEM - 1.2.1",
       "description": "Sample playbooks for \"RSA Netwitness SIEM\" connector. If you are planning to use any of the sample playbooks in your environment, ensure that you clone those playbooks and move them to a different collection, since the sample playbook collection gets deleted during connector upgrade and delete.",
       "visible": true,
-      "image": "/api/3/images/80fd1ca7-e823-4c5f-9031-dd79db4c5854",
+      "image": null,
       "id": 581,
       "createDate": 1707205005.856489,
       "modifyDate": 1707205005.856489,
@@ -46,7 +46,7 @@
                   "pageSize": "",
                   "pageNumber": ""
                 },
-                "version": "1.2.0",
+                "version": "1.2.1",
                 "connector": "rsa-netwitness-siem",
                 "operation": "get_incident_by_date_range",
                 "operationTitle": "Get Incidents by Date Range",
@@ -200,7 +200,7 @@
                   "pageSize": "{{vars.max_events}}",
                   "pageNumber": ""
                 },
-                "version": "1.2.0",
+                "version": "1.2.1",
                 "connector": "rsa-netwitness-siem",
                 "operation": "get_incidents_alerts",
                 "mock_result": "{\n  \"data\": {\n    \"items\": [\n      {\n        \"id\": \"64c95a16bef7fb6f08fdff45\",\n        \"type\": \"Log\",\n        \"title\": \"RSA Test - Fortinet Failover - virtual cluster's member state moved\",\n        \"detail\": null,\n        \"events\": [\n          {\n            \"domain\": null,\n            \"source\": {\n              \"user\": {\n                \"adDomain\": null,\n                \"username\": null,\n                \"adUsername\": null,\n                \"emailAddress\": null\n              },\n              \"device\": {\n                \"port\": null,\n                \"dnsDomain\": null,\n                \"ipAddress\": null,\n                \"macAddress\": null,\n                \"dnsHostname\": null\n              }\n            },\n            \"destination\": {\n              \"user\": {\n                \"adDomain\": null,\n                \"username\": null,\n                \"adUsername\": null,\n                \"emailAddress\": null\n              },\n              \"device\": {\n                \"port\": null,\n                \"dnsDomain\": null,\n                \"ipAddress\": null,\n                \"macAddress\": null,\n                \"dnsHostname\": null\n              }\n            },\n            \"eventSource\": \"10.111.100.54:50005\",\n            \"eventSourceId\": \"1830839092206\"\n          }\n        ],\n        \"source\": \"Event Stream Analysis\",\n        \"created\": \"2023-08-01T19:16:38.436Z\",\n        \"riskScore\": null\n      },\n      {\n        \"id\": \"64c95e7bbef7fb6f08fdff46\",\n        \"type\": \"Log\",\n        \"title\": \"RSA Test - Fortinet Failover - virtual cluster's member state moved\",\n        \"detail\": null,\n        \"events\": [\n          {\n            \"domain\": null,\n            \"source\": {\n              \"user\": {\n                \"adDomain\": null,\n                \"username\": null,\n                \"adUsername\": null,\n                \"emailAddress\": null\n              },\n              \"device\": {\n                \"port\": null,\n                \"dnsDomain\": null,\n                \"ipAddress\": null,\n                \"macAddress\": null,\n                \"dnsHostname\": null\n              }\n            },\n            \"destination\": {\n              \"user\": {\n                \"adDomain\": null,\n                \"username\": null,\n                \"adUsername\": null,\n                \"emailAddress\": null\n              },\n              \"device\": {\n                \"port\": null,\n                \"dnsDomain\": null,\n                \"ipAddress\": null,\n                \"macAddress\": null,\n                \"dnsHostname\": null\n              }\n            },\n            \"eventSource\": \"10.111.100.54:50005\",\n            \"eventSourceId\": \"1830866045462\"\n          }\n        ],\n        \"source\": \"Event Stream Analysis\",\n        \"created\": \"2023-08-01T19:35:23.067Z\",\n        \"riskScore\": null\n      }\n    ],\n    \"hasNext\": false,\n    \"pageSize\": 100,\n    \"pageNumber\": 0,\n    \"totalItems\": 2,\n    \"totalPages\": 1,\n    \"hasPrevious\": false\n  },\n  \"status\": \"Success\",\n  \"message\": \"\",\n  \"operation\": null,\n  \"execution_time\": \"750 ms\"\n}",
@@ -284,7 +284,7 @@
                 "name": "RSA Netwitness SIEM",
                 "config": "''",
                 "params": [],
-                "version": "1.2.0",
+                "version": "1.2.1",
                 "connector": "rsa-netwitness-siem",
                 "operation": "get_alerts",
                 "operationTitle": "Get Alerts"
@@ -404,7 +404,7 @@
                   "pageSize": "",
                   "pageNumber": ""
                 },
-                "version": "1.2.0",
+                "version": "1.2.1",
                 "connector": "rsa-netwitness-siem",
                 "operation": "get_incidents_alerts",
                 "operationTitle": "Get Incident Related Alerts",
@@ -793,7 +793,7 @@
                   "pageSize": "{{vars.records_per_page}}",
                   "pageNumber": "{{vars.item}}"
                 },
-                "version": "1.2.0",
+                "version": "1.2.1",
                 "for_each": {
                   "item": "{{vars.pages}}",
                   "parallel": false,
@@ -848,7 +848,7 @@
                   "pageSize": "{{vars.records_per_page}}",
                   "pageNumber": 0
                 },
-                "version": "1.2.0",
+                "version": "1.2.1",
                 "connector": "rsa-netwitness-siem",
                 "operation": "get_incident_by_date_range",
                 "mock_result": "{\n    \"data\": {\n      \"items\": [\n        {\n          \"id\": \"64c95a16bef7fb6f08fdff41\",\n          \"type\": \"Log\",\n          \"title\": \"RSA Test - Fortinet Failover - virtual cluster's member state moved\",\n          \"detail\": null,\n          \"events\": [\n            {\n              \"domain\": null,\n              \"source\": {\n                \"user\": {\n                  \"adDomain\": null,\n                  \"username\": null,\n                  \"adUsername\": null,\n                  \"emailAddress\": null\n                },\n                \"device\": {\n                  \"port\": null,\n                  \"dnsDomain\": null,\n                  \"ipAddress\": null,\n                  \"macAddress\": null,\n                  \"dnsHostname\": null\n                }\n              },\n              \"destination\": {\n                \"user\": {\n                  \"adDomain\": null,\n                  \"username\": null,\n                  \"adUsername\": null,\n                  \"emailAddress\": null\n                },\n                \"device\": {\n                  \"port\": null,\n                  \"dnsDomain\": null,\n                  \"ipAddress\": null,\n                  \"macAddress\": null,\n                  \"dnsHostname\": null\n                }\n              },\n              \"eventSource\": \"10.111.100.54:50005\",\n              \"eventSourceId\": \"1830839092206\"\n            }\n          ],\n          \"source\": \"Event Stream Analysis\",\n          \"created\": \"2023-08-01T19:16:38.436Z\",\n          \"riskScore\": null\n        }                 \n      ],\n      \"hasNext\": false,\n      \"pageSize\": 1,\n      \"pageNumber\": 0,\n      \"totalItems\": 6,\n      \"totalPages\": 1,\n      \"hasPrevious\": false\n    },\n    \"status\": \"Success\",\n    \"message\": \"\",\n    \"operation\": null,\n    \"execution_time\": \"750 ms\"\n  }",
@@ -1145,7 +1145,7 @@
                 "params": {
                   "criteria": "{\"criteria\":{\"criteriaList\":[{\"criteriaList\":[],\"expressionList\":[{\"propertyName\":\"hostName\",\"restrictionType\":\"LIKE\",\"propertyValues\":[{\"value\":\"WIN-854PACLCQ07-VC\",\"relative\":false}]}],\"predicateType\":\"AND\"},{\"criteriaList\":[],\"expressionList\":[{\"propertyName\":\"riskScore\",\"restrictionType\":\"BETWEEN\",\"propertyValues\":[{\"value\":0,\"relative\":false},{\"value\":100,\"relative\":false}]}],\"predicateType\":\"OR\"}],\"expressionList\":[],\"predicateType\":\"AND\"},\"sort\":{\"keys\":[\"riskScore\"],\"descending\":true}}"
                 },
-                "version": "1.2.0",
+                "version": "1.2.1",
                 "connector": "rsa-netwitness-siem",
                 "operation": "get_hosts",
                 "operationTitle": "Get Hosts List"
@@ -1264,7 +1264,7 @@
                 "name": "RSA Netwitness SIEM",
                 "config": "''",
                 "params": [],
-                "version": "1.2.0",
+                "version": "1.2.1",
                 "connector": "rsa-netwitness-siem",
                 "operation": "get_service_id",
                 "operationTitle": "Get Service IDs"

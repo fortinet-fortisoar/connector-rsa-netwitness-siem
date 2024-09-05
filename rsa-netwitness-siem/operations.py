@@ -154,6 +154,8 @@ def get_alerts(config, params):
                 "numberOfRecords": "10"}
         if payload.get('numberOfRecords'):
             data.update({"numberOfRecords": str(payload.get('numberOfRecords'))})
+        if payload.get('includeFields'):
+            data.update({"includeFields": payload.get('includeFields')})
         if payload.get('meta_name') and payload.get('meta_value'):
             data.update({"meta_name": str(payload.get('meta_name')), "meta_value": str(payload.get('meta_value'))})
         response = obj.make_api_call(updated_headers={"Accept": "application/json;charset=UTF-8", "Content-Type": "text/plain;charset=ISO-8859-1"},
